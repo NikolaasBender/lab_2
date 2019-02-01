@@ -18,10 +18,11 @@ grep '\((303)\|303\)[ -.]\?[0-9]\{3\}[ -.]\?[0-9]\{4\}' $findfile >> $phonetxt
 #4 LIST ALL @geocities.com EMAILS
 grep '@geocities.com' $findfile >> $emailtxt
 
+#5 LET THE USER SEARCH
 read -p "Enter some search string: " searcher
 echo
 grep $searcher $findfile >> 'comand_results.txt'
 
 read -p "Enter anything to reset: " searcher
 echo
-rm $phonetxt $emailtxt
+rm $phonetxt $emailtxt 'comand_results.txt'
